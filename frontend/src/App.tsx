@@ -17,11 +17,12 @@ import ScorecardView from './views/scorecard'
 import ClusterView from './views/cluster'
 import ComparisonView from './views/comparison'
 import DatadriftView from './views/datadrift'
+import BaselineSwitchView from './views/baselineswitch'
 import PushplanView from './views/pushplan'
 import MetricdrillView from './views/metricdrill'
 import TacticlibView from './views/tacticlib'
 
-const navItems = [{ label: "运营概览", path: "/" }, { label: "行为序列", path: "/sequence" }, { label: "RFM分层", path: "/rfm" }, { label: "流失预警", path: "/churn" }, { label: "智能推荐", path: "/recommend" }, { label: "归因建模", path: "/attrmodel" }, { label: "活动评估", path: "/activity" }, { label: "实时决策", path: "/realtime" }, { label: "预算分配", path: "/budget" }, { label: "LTV估算", path: "/lifetime" }, { label: "实验变体", path: "/abvariant" }, { label: "运营看板", path: "/dashboard" }, { label: "评分卡", path: "/scorecard" }, { label: "聚类分群", path: "/cluster" }, { label: "对比分析", path: "/comparison" }, { label: "数据漂移", path: "/datadrift" }, { label: "推送计划", path: "/pushplan" }, { label: "指标归因", path: "/metricdrill" }, { label: "策略库", path: "/tacticlib" }]
+const navItems = [{ label: "运营概览", path: "/" }, { label: "行为序列", path: "/sequence" }, { label: "RFM分层", path: "/rfm" }, { label: "流失预警", path: "/churn" }, { label: "智能推荐", path: "/recommend" }, { label: "归因建模", path: "/attrmodel" }, { label: "活动评估", path: "/activity" }, { label: "实时决策", path: "/realtime" }, { label: "预算分配", path: "/budget" }, { label: "LTV估算", path: "/lifetime" }, { label: "实验变体", path: "/abvariant" }, { label: "运营看板", path: "/dashboard" }, { label: "评分卡", path: "/scorecard" }, { label: "聚类分群", path: "/cluster" }, { label: "对比分析", path: "/comparison" }, { label: "数据漂移", path: "/datadrift" }, { label: "推荐基线切换", path: "/baseline-switch" }, { label: "推送计划", path: "/pushplan" }, { label: "指标归因", path: "/metricdrill" }, { label: "策略库", path: "/tacticlib" }]
 
 export default function App() {
   const [operator] = useState('值班管理员')
@@ -60,6 +61,7 @@ export default function App() {
           <Route path="/cluster" element={<ClusterView />} />
           <Route path="/comparison" element={<ComparisonView />} />
           <Route path="/datadrift" element={<DatadriftView />} />
+          <Route path="/baseline-switch" element={<BaselineSwitchView />} />
           <Route path="/pushplan" element={<PushplanView />} />
           <Route path="/metricdrill" element={<MetricdrillView />} />
           <Route path="/tacticlib" element={<TacticlibView />} />
